@@ -1,0 +1,53 @@
+<body>
+    {{> search}}
+</body>
+
+<template name="search">
+    <div class="page-header clearfix" width="100%">
+        <h4 class="col-sm-1">People list</h4>
+        <div class="col-md-2">
+            <input type="text" name="search" class="form-control" width="250px" placeholder="Find a person...">
+        </div>
+        <div class="col-md-2">
+            <select id="sorting">
+                <option value="recent">recent</option>
+                <option value="firstname-a-z">first name a-z</option>
+                <option value="firstname-z-a">first name z-a</option>
+                <option value="lastname-a-z">last name a-z</option>
+                <option value="lastname-z-a">last name z-a</option>
+                <option value="age-asc">age-asc</option>
+                <option value="age-desc">age-desc</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <table class="table table-striped" width="100%">
+            <thead>
+                <tr>
+                    <th class="col-md-5">firstname</th>
+                    <th class="col-md-5">lastname</th>
+                    <th class="col-md-2">age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if searching}}
+                    <p class="alert alert-warning">Loading</p>
+                {{else}}
+                    {{#each people}}
+                        {{> person}}
+                    {{else}}
+                        <p>Nothing found.</p>
+                    {{/each}}
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="person">
+    <tr>
+        <td class="col-md-5">{{firstName}}</td>
+        <td class="col-md-5">{{lastName}}</td>
+        <td class="col-md-2">{{age}}</td>
+    </tr>
+</template>
