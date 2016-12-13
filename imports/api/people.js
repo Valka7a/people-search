@@ -30,16 +30,6 @@ if (Meteor.isServer) {
 			People.insert({ firstName: "Tandra" , lastName: "Higuchi", age: 29, createdAd: new Date() });
 			People.insert({ firstName: "Scot" , lastName: "Poulton", age: 28, createdAd: new Date() });
 			People.insert({ firstName: "Kathryn" , lastName: "Precourt", age: 28, createdAd: new Date() });
-			People.insert({ firstName: "Stacy" , lastName: "Zeck", age: 27, createdAd: new Date() });
-			People.insert({ firstName: "Trista" , lastName: "Joyce", age: 27, createdAd: new Date() });
-			People.insert({ firstName: "Eleonora" , lastName: "Thetford", age: 26, createdAd: new Date() });
-			People.insert({ firstName: "Gwen" , lastName: "Herrada", age: 26, createdAd: new Date() });
-			People.insert({ firstName: "Sarita" , lastName: "Kung", age: 25, createdAd: new Date() });
-			People.insert({ firstName: "Paul" , lastName: "Tanouye", age: 25, createdAd: new Date() });
-			People.insert({ firstName: "Emmanuel" , lastName: "Devinney", age: 24, createdAd: new Date() });
-			People.insert({ firstName: "Karima" , lastName: "Schuster", age: 24, createdAd: new Date() });
-			People.insert({ firstName: "Salena" , lastName: "Clewis", age: 23, createdAd: new Date() });
-			People.insert({ firstName: "Carleen" , lastName: "Corrie", age: 23, createdAd: new Date() });		
 		}
 	});
 
