@@ -60,8 +60,12 @@ Template.search.events({
 		let value = event.target.value.trim();
 
 		if (value !== '' && event.keyCode === 13) {
-			template.searchQuery.set(value);
-			template.searching.set(true);
+			let lastValue = template.searchQuery.get();
+
+			if (lastValue !== value) {
+				template.searchQuery.set(value);
+				template.searching.set(true);
+			}
 		}
 
 		if (value === '') {
